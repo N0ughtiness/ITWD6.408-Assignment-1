@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Research</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408</p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="forms.html">FORMS</a></li>
+						<li><a href="xml-rss.html">XML/RSS</a></li>
+						<li><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li class="active"><a href="my-research.html">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+              
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="xml-rss.html">XML/RSS</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li class="active"><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+<!--------------Main Section---------------->
+<!--------------Row 1----------------->		
+		<section class="research-section"> 			
+		<!----Flip Box 1---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Copyright, Creative Common (CC) Licenses, Fair Use</h4>
+						<img src="MEDIA/copyright.jpg" alt="Copyright Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						The Creative Commons copyright licenses and tools forge a balance inside the traditional “all rights reserved” setting that copyright law creates.
+						<br><a href = "https://creativecommons.org/licenses/">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<!----Flip Box 2---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Privacy & Privacy Policy</h4>
+						<img src="MEDIA/privacy.svg" alt="Privacy Policy Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						If you collect personal information from your customers and other individuals (such as your employees), the law requires that you inform them when you do so. Many businesses will do this with a privacy policy to detail exactly what personal information they collect and what they do with it.
+						<br><a href = "https://legalvision.co.nz/data-privacy-it/privacy-statement-policy/">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<!----Flip Box 3---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Search Engine Optimization (SEO)</h4>
+						<img src="MEDIA/seo.jpg" alt="SEO Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						SEO stands for “search engine optimization.” In simple terms, it means the process of improving your site to increase its visibility when people search for products or services related to your business in Google, Bing, and other search engines.
+						<br><a href = "https://searchengineland.com/guide/what-is-seo">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		</section>
+		
+<!--------------Row 2----------------->	
+		<section class="research-section"> 
+		<!----Flip Box 4---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Web Publishing</h4>
+						<img src="MEDIA/webhost.webp" alt="Web Publishing Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						Web publishing is the process of publishing original content on the Internet. The process includes building and uploading websites, updating the associated webpages, and posting content to these webpages online. Web publishing comprises of personal, business, and community websites, e-books & blogs.
+						<br><a href = "https://www.techopedia.com/definition/10012/web-publishing#:~:text=Web%20publishing%20is%20the%20process,to%20e%2Dbooks%20and%20blogs.">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!----Flip Box 5---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Web Performance & Maintenance</h4>
+						<img src="MEDIA/maintenance.jpg" alt="Web Performance/Maintenance Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						Poorly optimized website performance is overwhelmed with a number of issues including slow loading times, being non-user friendly, user incompatibilities, and so on.  These issues show that your website is not just losing conversion on the website, but in the future, this loss is magnified to worsen site results.
+						<br><a href = "https://star-knowledge.com/blog/tips-to-improve-your-website-performance/">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!----Flip Box 6---->
+		<div class="research-flip-container">
+			<div class="research-flip-box">
+				<div class="research-flip-box-inner">
+					<div class="research-flip-box-front">
+						<h4>Web security</h4>
+						<img src="MEDIA/security.webp" alt="Web Security Img"/>
+					</div>
+					<div class="research-flip-box-back">
+						<p>
+						Web security refers to the protective measures and protocols that organizations adopt to protect the organization from cyber criminals and threats that use the web channel. Web security is critical to business continuity and to protecting data, users and companies from risk.
+						<br><a href = "https://www.mimecast.com/content/web-security/">Read More</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		</section>
+
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Daniel van Wyk <br />
+			Contact me at: <a href="mailto:danvanwyk@outlook.com">danvanwyk@outlook.com</a>
+		</div>
+	</footer>		
+		
+		
+<!--Embed the js file at the bottom of the html file-->	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+</body>
+
+</html>

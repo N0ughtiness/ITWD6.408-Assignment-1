@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+	<!--------------------Nav Section----------------------->	
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408</p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li class="active"><a href="index.html">HOME</a></li>
+						<li><a href="forms.html">FORMS</a></li>
+						<li><a href="xml-rss.html">XML/RSS</a></li>
+						<li><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li><a href="my-research.html">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="xml-rss.html">XML/RSS</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
+	
+	<!------------------Main content section------------------>
+	<main>
+		<!------------Showcase Section------------->
+		<section class="showcase">
+			<div class="bg-image"></div>
+			<div class="bg-text">
+				<h1>I am Daniel van Wyk</h1>
+				<p>And I'm a Developer</p>
+			</div>
+		</section>
+		
+		<!---------------Bio Section--------------->
+		<section class="bio">
+			<div class="title">Bio</div>
+			<div class="bio-img">
+				<img src="MEDIA/portrait.png" alt="Portrait" />
+			</div>
+			<div class="bio-txt">
+				<p><br>
+					My name is Daniel van Wyk, I am studying a Bachelor of Computer Science at EIT.<br>
+					My hobbies include electronics and IoT projects, Computing and Gaming.<br>
+					I am taking this paper to learn more about website development and improve my hands-on coding knowledge.
+				</p>
+			</div>
+		</section>
+		
+		<!-----Web Technologies Section Section----->
+		<section class="webtechno">
+		<div class="title">Web Techno Section</div>
+		<br><h5>The Top 5 Web Technologies I use are:</h5>
+		<div class="webtechno-txt">
+			<ol>
+				<li><b>Github:</b> Used for hosting and collaborative work.</li>
+				<li><b>Visual Studio Code:</b> Code editing software.</li>
+				<li><b>Google:</b> Search engine for research.</li>
+				<li><b>One Drive:</b> Cloud storage service for backing up files.</li>
+				<li><b>Draw.io:</b> Web based diagraming tool.</li>
+			</ol>
+		</div>
+		</section>
+		
+		
+		<!----------Competencies Section------------>
+		<section class="competencies"> 
+		<div class="title">Technical competencies section</div>
+		
+		<!----Flip Box 1---->
+		<div class="flip-container">
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h4>Mark-Up (HTML5)</h4>
+						<img src="MEDIA/html5.png" alt="HTML5 Img"/>
+					</div>
+					<div class="flip-box-back">
+						<p>
+						Competency:<br>
+						Intermediate
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!----Flip Box 2---->
+		<div class="flip-container">
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h4>Styling (CSS3)</h4>
+						<img src="MEDIA/css3.png" alt="CSS3 Img"/>
+					</div>
+					<div class="flip-box-back">
+						<p>
+						Competency:<br>
+						Intermediate
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!----Flip Box 3---->
+		<div class="flip-container">
+			<div class="flip-box">
+				<div class="flip-box-inner">
+					<div class="flip-box-front">
+						<h4>JavaScript</h4>
+						<img src="MEDIA/javascript.png" alt="JavaScript Img"/>
+					</div>
+					<div class="flip-box-back">
+						<p>
+						Competency:<br>
+						Intermediate
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+		</section>
+		
+		<!-----------Statement Section------------->
+		<section class="statement">
+			<div class="title">Statement of Authenticity</div>
+			<br>
+			<p>I confirm that:<br>
+			   This is an original assessment and is entirely my own work.<br>
+			   It contains no material previously published or written by another person or myself except where due
+			   acknowledgement is made in the text.<br>
+			   No material which to a substantial extent, has been submitted for any other academic course, is included
+			   without acknowledgement.</p>
+		</Section>
+		
+	</main>
+	
+	<!----------------------Footer section------------------------------>	
+	<footer>
+		<div> @Created by: Daniel van Wyk <br>
+			Contact me at: <a href="mailto:danvanwyk@outlook.com">danvanwyk@outlook.com</a>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+
+</body>
+</html>
+

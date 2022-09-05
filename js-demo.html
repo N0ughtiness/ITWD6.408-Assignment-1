@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Javascript</title>
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+	<header>
+		<!--Use Flexbox to create the navigation bar-->
+		<div class="flexbox-container">
+			<div class="box-1">
+				<img src="MEDIA/global.png" alt="Logo"/>		
+			</div>	
+				
+			<div class="box-2">
+				<p class="tagline">ITWD6.408</p>
+			</div>
+			
+			<div class="box-3">
+				<div class="horizontal-nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="forms.html">FORMS</a></li>
+						<li><a href="xml-rss.html">XML/RSS</a></li>
+						<li class="active"><a href="js-demo.html">JAVASCRIPT</a></li>
+						<li><a href="my-research.html">RESEARCH</a></li>	
+					</ul>
+				</div>			
+			</div>			
+			<div class="box-4">
+				<p onclick="openNav()">≡</p>
+			</div>				
+		</div>	
+              
+		<!--Curtain menu: collapse this menu as default when loading the page-->
+		<nav id="curtain-nav">
+			<!--Add a close button (X) hyperlink on the top left corner-->
+			<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+			<div class="curtain-nav-content">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="forms.html">FORMS</a></li>
+					<li><a href="xml-rss.html">XML/RSS</a></li>
+					<li class="active"><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<!--Button section-->
+			<div class="col-12 col-md-2">
+				<div class="container-fluid">
+					<div class="row justify-content-around">
+						<!--Button 1-->						
+						<button class="col-6 col-md-12 btn btn-primary bg-warning" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button1" 
+								aria-expanded="false" aria-controls="button1">Demo 1</button>
+						<!--Button 2-->
+						<button class="col-6 col-md-12 btn btn-primary" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button2" 
+								aria-expanded="false" aria-controls="button2">Demo 2</button>	 					
+								
+						<!--Button 3-->
+						<button class="col-6 col-md-12 btn btn-primary bg-warning" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button3" 
+								aria-expanded="false" aria-controls="button3">Demo 3</button>	 					
+								
+						<!--Button 4-->
+						<button class="col-6 col-md-12 btn btn-primary" type="button" 
+								data-bs-toggle="collapse" data-bs-target="#button4" 
+								aria-expanded="false" aria-controls="button4">Demo 4</button>	 					
+								
+					</div>			
+				</div>			
+			</div>
+			
+			<!--Main content section-->
+			<div class="col-12 col-md-10">
+			
+				<div class="row">
+				  <div class="col-12">
+				  
+					<!--Content area 1 for button 1-->
+					<div class="collapse show multi-collapse" id="button1">
+					  <div class="card card-body">JS Demo 1: Slideshow<br>
+					  <!---Manual Slideshow--->
+						<section class="container">
+							<h3>Manual Slideshow: Two buttons</h3>
+							<h4 id="manual-slide-title">Microsoft Xbox Series X 1TB Console</h4>
+							<p id="manual-slide-price">$799.00</p>
+							<img id="manual-slide-image" src="MEDIA/item0.png" height="300px">
+							<br>
+							<button onclick="previousSlide()">PREVIOUS</button>
+							<button onclick="nextSlide()">NEXT</button>
+						</section>
+						<br>
+					   <!---Automatic Slideshow--->
+						<section class="container">
+							<h3>Automatic Slideshow</h3>
+							<h4 id="auto-slide-title">Microsoft Xbox Series X 1TB Console</h4>
+							<p id="auto-slide-price">$799.00</p>
+							<img id="auto-slide-image" src="MEDIA/item0.png" height="300px">
+						</section>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <!--Content area for button 2-->
+				  <div class="col-12">
+					<div class="collapse multi-collapse" id="button2">
+					  <div class="card card-body">JS Demo 2: Dropdown Menu<br>
+					   <!---Dropdown Menu--->
+							<h3>Dropdown Menu</h3>
+							<label>Select item: </label>
+							<select id="my-itemList" onchange="displayMyitem()">
+							</select>
+							<br>
+							<section class="container">
+							<h4 id="my-itemTitle">Microsoft Xbox Series X 1TB Console</h4>
+							<p id="my-itemPrice">$799.00</p>
+							<img id="my-itemImageURL" src="MEDIA/item0.png" height="300px">
+							</section>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <!--Content area for button 3-->
+				  <div class="col-12">
+					<div class="collapse multi-collapse" id="button3">
+					  <div class="card card-body">JS Demo 3: Add a New Comment<br>
+					   <!---Add A New Comment--->
+						<h3>Add a New Comment</h3>
+						<section class="container">
+							<h4 id="my-itemTitle">Microsoft Xbox Series X 1TB Console</h4>
+							<p id="my-itemYear">$799.00</p>
+							<img id="my-itemImageURL" src="MEDIA/item0.png" height="300px">
+							<br>
+							<h4>Comments: </h4>
+							<div id="comment-list"> </div>
+							<h4>Add your comment: </h4>
+							<label>Name: </label>
+							<input type="text" id="comment_name" placeholder="your name" size="90">
+							<br>
+							<label>Comment: </label><br>
+							<textarea id="comment_text" cols="100" rows="10">
+							</textarea>
+							<br>
+							<button onclick="addComment()">POST</button>
+						</section>
+					  </div>
+					</div>
+				  </div>
+				  
+				  <!--Content area for button 4-->
+				  <div class="col-12">
+					<div class="collapse multi-collapse" id="button4">
+					  <div class="card card-body">JS Demo 4: Vote<br>
+					   <!---Vote for a product--->
+					    <h3>Vote for a product</h3>
+						<section class="container">
+							<h4 id="my-itemTitle">Microsoft Xbox Series X 1TB Console</h4>
+							<p id="my-itemPrice">$799.00</p>
+							<img id="my-itemImageURL" src="MEDIA/item0.png" height="300px">
+							<br>
+							<button id="likeButton" onclick="like()">&#128077;</button>
+							<p id="likeNumber" style="display: inline-block;">0</p>
+							<button id="dislikeButton" onclick="dislike()">&#128078;</button>
+							<p id="dislikeNumber" style="display: inline-block;">0</p>
+						</section>
+					  </div>
+					</div>
+				  </div>
+				  
+				</div>				
+			</div>		
+			
+		</div>
+	</div>
+
+
+
+
+
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Daniel van Wyk <br />
+			Contact me at: <a href="mailto:danvanwyk@outlook.com">danvanwyk@outlook.com</a>
+		</div>
+	</footer>		
+		
+		
+<!--Embed the js file at the bottom of the html file-->	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>	
+	<script type="text/javascript" src="JS/javascript.js">
+	</script>
+</body>
+
+</html>

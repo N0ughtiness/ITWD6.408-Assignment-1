@@ -1,0 +1,383 @@
+/*-------------------------------------------------*/
+/* MOBILE FIRST APPROACH
+   All the below CSS styles are valid for Mobile (small) devices
+   Link: https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+  
+   CSS Relative Unit
+   Link: https://www.w3schools.com/cssref/css_units.asp
+         https://css-tricks.com/css-font-size/
+         https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+*/
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f4f4f4;	
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;/*Set the baseline font size for the whole website*/
+}
+
+/*Footer Area*/
+footer {
+	height: 10vh;
+	background-color: #DAF7A6;
+	text-align: center;
+	
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/*Header Area*/
+/*---------------------------------*/
+/*CSS flexbox: 1D Card Layout
+  Link 1: https://codelikethis.com/lessons/responsive-layout/flexbox-layout 
+  Link 2: https://medium.com/@merveyuksek/webpage-layout-examples-with-flexbox-88287f010a08
+*/
+.flexbox-container {
+	/*flexbox container*/
+	display: flex;
+	flex-direction: row;/*display on a row => horizontally*/  
+	
+	background-color: #DAF7A6;
+	min-height: 5vh;
+}
+
+.box-1 {
+	flex: 0; /*wrap the content*/
+}	
+
+.box-2 {
+	flex: 1;
+	
+	/*Centering both vertical and horizontal*/
+	display: flex;
+	font-size: 1.5em;
+	justify-content: left;
+	align-items: center;
+}
+  
+.box-3 {
+    flex: 4; /*horizontal nav on desktop*/
+	
+	/*Centering the content both vertical and horizontal*/
+	display: flex;
+	justify-content: center;
+	align-items: center;		
+}
+
+.box-4 {
+    flex: 1;/*Curtain menu*/
+	
+	font-size: 4.0em;
+	color: blue;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+
+/*horizontal nav*/
+.horizontal-nav {
+	display: none; /*Hide on mobile devices*/
+}
+   
+/*Curtain menu*/
+nav {
+	padding: 10px 10px 10px 10px;/*10px 10px 10px 10px*/
+	overflow: visible;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+
+nav ul li {
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+nav ul li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;	
+}
+
+nav ul li ul li {
+	background: #555; 
+	display: block; 
+	font-size: 1em;
+}
+
+nav ul li ul li a {
+	display: block; 
+	text-align: left;
+
+}
+
+nav ul li.dropdown:hover ul {
+	display: block;
+}
+
+
+#curtain-nav {
+	height: 70%;/*100%*/
+	width: 0;/*Hide it as default when loading page*/
+	padding: 0;
+	position: fixed;
+	z-index: 3;
+	top: 0; 
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;	
+}
+
+.curtain-nav-content {
+	/*For curtain menu*/
+	position: relative;
+	top: 15%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;	
+	overflow: visible;
+}
+
+.nav-close-button {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 2.0em;
+	color: white;
+	text-decoration: none;
+}
+
+/*Set hover effect for items in the menu*/
+.active {
+	background-color: #FF9633;
+}
+
+li:hover:not(.active) {
+	background-color: green;
+}
+
+/*Define style for main area*/
+/*Main area*/
+main {
+	min-height: 85vh;
+	background-color: gray;
+	
+	/*Use CSS grid*/
+	display: grid;
+	grid-template-areas: "area-1"
+						 "area-2"
+						 "area-3"
+						 "area-4"
+						 "area-5";						 
+}
+
+
+/*-------Showcase Section--------*/
+.showcase {
+	grid-area: area-1;
+	height: 30vh;
+	background-color: gray;
+}
+
+.bg-image {
+  /* The image used */
+   background-image: url("../MEDIA/Showcase_Background.jpeg");
+  
+  /* Add the blur effect */
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*---------Bio Section-----------*/
+.bio {
+	grid-area: area-2;
+	min-height: 20vh;
+	background-color: #F1C40F;
+}
+
+
+/*---Web Technologies Section----*/
+.webtechno {
+	grid-area: area-3;
+	min-height: 20vh;
+	background-color: #EC7063;
+}
+
+
+/*------Competencies Section------*/
+.competencies {
+	grid-area: area-4;
+	display: flex;
+	flex-direction: column;
+	min-height: 20vh;
+	background-color: #DAF7A6;
+	align-items: center;
+}
+
+.competecies-title {
+	display: flex;
+	flex-direction: row;
+	align-items: left;
+}
+
+/* The flip box container*/
+.flip-box {
+  background-color: transparent;
+  width: 30vh;
+  height: 10vh;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: Green;
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/*-------Statement Section-------*/
+.statement {
+	grid-area: area-5;
+	min-height: 15vh;
+	background-color: #FF7F50;
+}
+
+
+
+
+
+
+/*-------------------------------------------------*/
+/*RESPONSIVE CSS*/
+/*THUMB RULE: Mobile First
+  Use min-width to detect device screen size.
+  min-width: 768px means that "when viewport is 768px or larger (Tablet or PC), set these styles; 
+             otherwise (Mobile) set above styles"  
+*/
+@media screen and (min-width: 768px) {
+	
+   /*Make Horizontal nav visible*/
+   .horizontal-nav {
+	   display: block;
+	   
+	   	background-color: #DAF7A6; 
+		padding: 10px 10px 10px 10px;
+   }
+   
+   .horizontal-nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.horizontal-nav ul li {
+		display: inline-block;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.0em;
+	}
+
+	.horizontal-nav ul li a {
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;	
+	}
+
+	.horizontal-nav ul li:hover:not(.active) {
+		background-color: green;
+	}
+
+	/*Change layout to big screen*/
+	main {
+		/*Use CSS grid*/
+		display: grid;
+		grid-template-columns:1fr 1fr ;
+		grid-template-areas: "area-1 area-1"
+							 "area-2 area-3"
+							 "area-4 area-4"
+							 "area-5 area-5";
+}
+
+.competencies {
+	
+}
+
+}
